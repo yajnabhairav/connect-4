@@ -1,0 +1,39 @@
+.game-board {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-gap: 10px;
+    justify-content: center;
+    margin-top: 50px;
+  }
+  
+  .game-board div {
+    width: 80px;
+    height: 80px;
+    background-color: #ccc;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .game-board div.player1 {
+    background-color: #f44336;
+    animation: grow 0.5s ease;
+  }
+  
+  .game-board div.player2 {
+    background-color: #4caf50;
+    animation: grow 0.5s ease;
+  }
+  
+  @keyframes grow {
+    0% {
+      transform: scale(0);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
